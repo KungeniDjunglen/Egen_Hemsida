@@ -1,0 +1,68 @@
+body{
+    background: pink;
+}
+
+.wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:auto;
+    grid-template-areas:
+    'header header'
+    'nav nav'
+    'main main'
+    'footer footer';
+}
+div{
+    background: white;
+}
+
+
+/* grid layout för elementen */
+nav { 
+    grid-area: nav;
+}
+
+.main_grid{
+    grid-area: main;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'main1 main2';
+}
+.main_index{
+    grid-area:main;
+}
+
+footer{
+    grid-area: footer;
+}
+
+main section:first-of-type{
+    grid-area: main1;
+
+}
+main section:last-of-type{
+    grid-area: main2;
+
+}
+
+
+
+/*Göra nav att bli griddad*/
+nav > ul {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style-type:none;
+
+}
+ul a {
+    background-color:lightgray;
+    border:3px black double;
+    font-size: 30px;
+}
+
+
+
+/*Text styling och det mesta för att göra det att se bra ut*/
+main{
+    text-align: center;
+}
