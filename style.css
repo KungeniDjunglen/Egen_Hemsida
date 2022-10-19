@@ -1,5 +1,7 @@
 body{
-    background: pink;
+    background: beige;
+    margin:0;
+    font-family: 'impact';
 }
 
 .wrapper{
@@ -12,14 +14,20 @@ body{
     'main main'
     'footer footer';
 }
-div{
-    background: white;
-}
+
+
+
 
 
 /* grid layout för elementen */
+
+header{
+    grid-area:header;
+    text-align:center;
+}
 nav { 
     grid-area: nav;
+    border: 1px black solid;
 }
 
 .main_grid{
@@ -30,17 +38,21 @@ nav {
 }
 .main_index{
     grid-area:main;
+    text-align:center;
 }
 
 footer{
     grid-area: footer;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background-color:darkslategray;
 }
 
-main section:first-of-type{
+main.main_grid section:first-of-type{
     grid-area: main1;
 
 }
-main section:last-of-type{
+main.main_grid section:last-of-type{
     grid-area: main2;
 
 }
@@ -50,19 +62,64 @@ main section:last-of-type{
 /*Göra nav att bli griddad*/
 nav > ul {
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto 1fr;
     list-style-type:none;
+    margin-left: 100px;
 
 }
-ul a {
+nav ul a {
     background-color:lightgray;
     border:3px black double;
     font-size: 30px;
+    margin-right:25px;
 }
+
+
 
 
 
 /*Text styling och det mesta för att göra det att se bra ut*/
 main{
-    text-align: center;
+    text-align: left;
+}
+
+main, nav, header{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    background: white;
+
+}
+section > p {
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+h2{
+    text-align:center;
+}
+img{
+    margin:20px;
+}
+footer{
+    color:white;
+}
+footer > section {
+    margin-left: 15vw;
+    margin-right: 15vw;
+
+}
+footer > section > ul{
+    list-style-type:none;
+
+}
+table{
+    margin-left:40%;
+    border-collapse:collapse;
+}
+td, th{
+        border:1px solid black;
+        padding:14px;
+
+}
+main > section {
+    margin-top: 5vh;
 }
