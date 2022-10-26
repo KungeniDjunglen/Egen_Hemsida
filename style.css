@@ -1,5 +1,5 @@
-body{
-    background: beige;
+body{ /* Typselektor */
+    background: beige; /* CSS deklaration*/
     margin:0;
     font-family: 'impact';
 }
@@ -29,7 +29,7 @@ nav {
     grid-area: nav;
 }
 
-.main_grid{
+.main_grid{ /* En klassselektor*/
     grid-area: main;
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -47,11 +47,11 @@ footer{
     background-color:darkslategray;
 }
 
-main.main_grid section:first-of-type{
+main.main_grid section:first-of-type{  /*En pseudoselektor*/
     grid-area: main1;
 
 }
-main.main_grid section:last-of-type{
+main.main_grid section:nth-child(2){
     grid-area: main2;
 
 }
@@ -81,7 +81,7 @@ main{
     text-align: left;
 }
 
-main, nav, header{
+main, nav, header{ /*En gruppselektor*/
     margin-left: 5vw;
     margin-right: 5vw;
     background: white;
@@ -90,9 +90,12 @@ main, nav, header{
 nav {
     background-color: slategray;
 }
-main > section > p {
+main > section > p {  /*En child selektor*/
     margin-left: 8vw;
     margin-right: 8vw;
+}
+main > section > ol{
+    margin-left: 8vw;
 }
 h2{
     text-align:center;
@@ -135,4 +138,12 @@ tr:nth-child(2n){
 }
 a:hover{
     color: rgb(226, 111, 197);
+}
+th:hover, td:hover{ /*En typ, grupp och pseudo selektor*/
+    background-color: yellow;
+}
+section > img {
+    max-width: 100%;
+    height: auto;
+
 }
