@@ -1,14 +1,14 @@
 body{ /* Typselektor */
-    background: beige; /* CSS deklaration*/
-    margin:0;
-    font-family: 'impact';
+    background: beige; /* Gör bakgrunden beige*/
+    margin:0; /*Tar bort margin runt webbsidan*/
+    font-family: 'impact';  /*Väljer typsnitt på hemsidan*/
 }
 
 .wrapper{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:auto;
-    grid-template-areas:
+    display:grid;  /*Berättar för webbläsaren att den ska visa en grid*/
+    grid-template-columns: 1fr 1fr; /* Berättar hur många kolumner griden ska ha och hur stora varje ska va*/
+    grid-template-rows:auto; /* Berättar hur många rader griden ska ha och hur stora varje ska va */
+    grid-template-areas: /*Vilka områden griden ska ha*/
     'header header'
     'nav nav'
     'main main'
@@ -22,8 +22,8 @@ body{ /* Typselektor */
 /* grid layout för elementen */
 
 header{
-    grid-area:header;
-    text-align:center;
+    grid-area:header; /* Vilket område header ska sitta i */
+    text-align:center; /* Gör texten centrerad */
 }
 nav { 
     grid-area: nav;
@@ -59,17 +59,17 @@ main.main_grid section:nth-child(2){
 
 
 /*Göra nav att bli griddad*/
-nav > ul {
+nav > ul { /* En child selector, alla ul driekt innanför en nav */
     display:grid;
     grid-template-columns: auto auto auto 1fr;
     list-style-type:none;
     margin-left: 100px;
 
 }
-nav ul a {
-    border:3px black double;
-    font-size: 30px;
-    margin-right:25px;
+nav ul a { /* väljer alla a innanför alla ul innanför alla nav */
+    border:3px black double;  /*Ger elementen en border*/
+    font-size: 30px;  /*Gör texten 30px stor*/
+    margin-right:25px; /* Gör att elementet har en 30px marginal till höger */
 }
 
 
@@ -104,8 +104,8 @@ img{
     margin:20px;
 }
 footer{
-    color:white;
-    padding-bottom: 4vh;
+    color:white;  /*Gör texten vit*/
+    padding-bottom: 4vh; /*Gör att elementet sträcker sig lite längre neråt*/
 }
 footer > section {
     margin-left: 15vw;
@@ -113,12 +113,12 @@ footer > section {
 
 }
 footer > section > ul{
-    list-style-type:none;
+    list-style-type:none;  /* Tar bort list stil */
     padding: 0;
 }
 
 table{
-    border-collapse:collapse;
+    border-collapse:collapse; /*Gör att tabellens alla kanter hänger ihop.*/
     margin-left: 8vw;
 }
 td, th{
@@ -143,7 +143,15 @@ th:hover, td:hover{ /*En typ, grupp och pseudo selektor*/
     background-color: yellow;
 }
 section > img {
-    max-width: 100%;
-    height: auto;
+    max-width: 90%; /* Bestämmer bredden på bilden */
+    height: auto; /* Bestämmer höjden på bilden */
 
+}
+section > a > img {
+    max-width: 90%;
+    height: auto;
+}
+.liten_bild{
+    max-width: 30%;
+    height: auto;
 }
